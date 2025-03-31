@@ -1,7 +1,7 @@
 const RadioButton = ({ item, selected, handleItemChange }) => {
   return (
     <div
-      className={`flex cursor-pointer items-center rounded-sm border-2 px-4 ${selected === item ? "border-blue-600 bg-blue-100" : "border-gray-200"}`}
+      className={`flex cursor-pointer items-center rounded-sm border-2 px-4 ${selected === item ? "border-blue-600 bg-blue-100" : "border-gray-300"}`}
     >
       <input
         id={item}
@@ -14,7 +14,7 @@ const RadioButton = ({ item, selected, handleItemChange }) => {
       />
       <label
         htmlFor={item}
-        className="mx-4 w-full py-4 text-sm font-semibold text-gray-900 md:text-base"
+        className="mx-4 w-full py-4 text-sm font-bold text-gray-900 md:text-base"
       >
         {item}
       </label>
