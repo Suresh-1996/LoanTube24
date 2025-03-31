@@ -25,10 +25,10 @@ const LoanPurposePage = () => {
 
   return (
     <div className="my-8 flex w-full flex-col items-center md:my-10">
-      <h1 className="text-center font-serif text-[34px] leading-9 font-medium md:w-[80%] md:text-[44px] md:leading-13 lg:w-[50%]">
+      <h1 className="text-center font-serif text-[34px] leading-10 font-medium md:w-[70%] md:text-[44px] md:leading-13 lg:w-[50%]">
         How are you going to use the money?
       </h1>
-      <div className="mt-8 flex w-[90%] flex-col gap-3 md:my-10 md:w-[80%] lg:w-[70%]">
+      <div className="mt-8 flex w-[90%] flex-col gap-3 md:my-10 md:w-[85%] lg:w-[65%]">
         {purposes.map((purpose, index) => (
           <RadioButton
             item={purpose}
