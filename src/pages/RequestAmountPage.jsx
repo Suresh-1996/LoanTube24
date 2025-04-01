@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-import Header from "../components/Header"
+import { useState } from "react"
 
 const RequestAmountPage = () => {
   const [value, setValue] = useState(9000)
