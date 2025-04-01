@@ -10,7 +10,7 @@ const RequestAmountPage = () => {
   const progress = ((value - min) / (max - min)) * 100
 
   return (
-    <div className="w-screen px-4 md:px-16 lg:px-48 xl:px-100 2xl:px-160">
+    <div className="w-screen px-3 md:px-16 lg:px-48 xl:px-100 2xl:px-160">
       <div className="flex w-full flex-col items-center py-8 lg:py-16">
         <h1 className="text-center font-serif text-[34px] leading-10 font-medium md:text-[44px] md:leading-14">
           What's your estimated <br /> debt balance?
