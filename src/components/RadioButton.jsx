@@ -1,7 +1,7 @@
 const RadioButton = ({ title, selected, handleItemChange, subtitle }) => {
   return (
     <div
-      className={`flex cursor-pointer items-center rounded-sm border-2 px-4 ${selected === title ? "border-blue-600 bg-blue-100" : "border-gray-300"}`}
+      className={`flex cursor-pointer items-center rounded-sm border-2 px-4 ${selected === title ? "border-blue-600 bg-blue-100" : "border-gray-400"}`}
     >
       <input
         id={title}
@@ -12,7 +12,9 @@ const RadioButton = ({ title, selected, handleItemChange, subtitle }) => {
         checked={selected === title}
         onChange={(e) => handleItemChange(e.target.value)}
       />
-      <div className="mx-4 flex w-full flex-col py-3">
+      <div
+        className={`mx-4 flex w-full flex-col ${subtitle ? "py-3" : "py-5"}`}
+      >
         <label
           htmlFor={title}
           className="text-sm font-bold text-gray-900 md:text-base"
