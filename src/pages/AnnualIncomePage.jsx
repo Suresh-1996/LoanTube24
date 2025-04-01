@@ -43,7 +43,7 @@ const AnnualIncomePage = () => {
             Over $150,000+
           </span>
         </div>
-        <button className="mt-15 w-full cursor-pointer rounded-md bg-[#006642] p-4 text-sm font-bold text-white">
+        <button className="mt-15 w-full cursor-pointer rounded-sm bg-[#006642] p-4 text-sm font-bold text-white">
           CONTINUE
         </button>
         <p className="mt-8 text-center text-xs">
