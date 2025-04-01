@@ -31,7 +31,7 @@ const LoanPurposePage = () => {
       <div className="mt-8 flex w-[90%] flex-col gap-3 md:my-10 md:w-[85%] lg:w-[65%]">
         {purposes.map((purpose, index) => (
           <RadioButton
-            item={purpose}
+            title={purpose}
             selected={selected}
             handleItemChange={handlePurposeChange}
             key={index}
