@@ -16,11 +16,11 @@ const CreditRatingPage = () => {
   ]
 
   return (
-    <div className="my-8 flex w-full flex-col items-center md:my-15">
-      <h1 className="text-center font-serif text-[34px] leading-10 font-medium md:w-[90%] md:text-[44px] md:leading-13 lg:w-[90%]">
+    <div className="flex w-full flex-col items-center px-4 py-8 md:px-16 lg:px-48 lg:py-16 xl:px-100 2xl:px-160">
+      <h1 className="text-center font-serif text-[34px] leading-10 font-medium md:text-[44px] md:leading-13">
         How would you rate your credit?
       </h1>
-      <div className="mt-8 flex w-[90%] flex-col gap-3 md:my-10 md:w-[85%] lg:w-[65%]">
+      <div className="mt-8 flex w-full flex-col gap-3 md:mt-12">
         {rates.map((rate, index) => (
           <RadioButton
             title={rate.title}
