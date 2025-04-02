@@ -5,7 +5,10 @@ const SelectInput = ({ options, label }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [selectedValue, setSelectedValue] = useState("")
   const [selectedLabel, setSelectedLabel] = useState("")
+  const [isFocused, setIsFocused] = useState(false)
+  const [dropdownPosition, setDropdownPosition] = useState("bottom")
   const dropdownRef = useRef(null)
+  const inputRef = useRef(null)
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -13,14 +16,32 @@ const SelectInput = ({ options, label }) => {
         setIsOpen(false)
       }
     }
-
     document.addEventListener("mousedown", handleClickOutside)
     return () => {
       document.removeEventListener("mousedown", handleClickOutside)
     }
   }, [])
 
+  const calculateDropdownPosition = () => {
+    if (inputRef.current) {
+      const inputRect = inputRef.current.getBoundingClientRect()
+      const windowHeight = window.innerHeight
+      const spaceBelow = windowHeight - inputRect.bottom
+      const spaceAbove = inputRect.top
+      const dropdownHeight = Math.min(options.length * 40, 240) // Assuming each option is 40px high, max 240px
+
+      if (spaceBelow < dropdownHeight && spaceAbove > spaceBelow) {
+        setDropdownPosition("top")
+      } else {
+        setDropdownPosition("bottom")
+      }
+    }
+  }
+
   const toggleDropdown = () => {
+    if (!isOpen) {
+      calculateDropdownPosition()
+    }
     setIsOpen(!isOpen)
   }
 
@@ -34,8 +55,11 @@ const SelectInput = ({ options, label }) => {
     <div className="relative w-full" ref={dropdownRef}>
       <div className="relative">
         <div
+          ref={inputRef}
           className="flex w-full cursor-pointer items-center justify-between rounded-sm border border-gray-300 bg-white px-3 py-5 pt-4 shadow-sm hover:border-black focus:border-2 focus:border-[#006642] focus:outline-none"
           onClick={toggleDropdown}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
           tabIndex={0}
         >
           <span className={selectedValue ? "text-gray-900" : "text-gray-400"}>
@@ -49,7 +73,7 @@ const SelectInput = ({ options, label }) => {
         <label
           className={`pointer-events-none absolute px-1 text-lg transition-all duration-200 ${
             selectedValue || isOpen
-              ? "-top-2 left-2 bg-white text-xs text-[#006642]"
+              ? `-top-2 left-2 bg-white text-xs ${isFocused ? "text-[#006642]" : "text-gray-500"}`
               : "top-3 left-3 text-gray-500"
           }`}
         >
@@ -57,7 +81,13 @@ const SelectInput = ({ options, label }) => {
         </label>
 
         {isOpen && (
-          <div className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md border border-gray-300 bg-white shadow-lg">
+          <div
+            className={`absolute z-10 w-full overflow-auto rounded-md border border-gray-300 bg-white shadow-lg ${
+              dropdownPosition === "top"
+                ? "bottom-[calc(100%+0.25rem)] max-h-[15rem]"
+                : "top-[calc(100%+0.25rem)] max-h-[15rem]"
+            }`}
+          >
             {options.map((option) => (
               <div
                 key={option.value}
