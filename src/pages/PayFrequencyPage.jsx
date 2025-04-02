@@ -17,8 +17,8 @@ const PayFrequencyPage = () => {
   ]
 
   return (
-    <div className="flex w-full flex-col items-center px-4 py-8 md:px-13 lg:px-45 lg:py-16 xl:px-84 2xl:px-157">
-      <h1 className="text-center font-serif text-[34px] leading-10 font-medium md:w-[80%] md:text-[44px] md:leading-13">
+    <div className="flex w-full flex-col items-center px-4 py-8 md:px-11 lg:px-43 lg:py-16 xl:px-95 2xl:px-155">
+      <h1 className="font-playfair text-center text-[34px] leading-10 font-semibold md:w-[80%] md:text-[44px] md:leading-13">
         How often do you get paid?
       </h1>
       <div className="mt-8 flex w-full flex-col gap-3 lg:mt-10">
