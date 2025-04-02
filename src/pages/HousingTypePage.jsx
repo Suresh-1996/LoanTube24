@@ -15,8 +15,8 @@ const HousingTypePage = () => {
   ]
 
   return (
-    <div className="flex w-full flex-col items-center px-4 py-8 md:px-13 lg:px-45 lg:py-16 xl:px-89 2xl:px-157">
-      <h1 className="text-center font-serif text-[34px] leading-10 font-medium md:text-[44px] md:leading-13">
+    <div className="flex w-full flex-col items-center px-7 py-8 md:px-13 lg:px-45 lg:py-16 xl:px-89 2xl:px-157">
+      <h1 className="font-playfair text-center text-[34px] leading-10 font-semibold md:text-[44px] md:leading-13">
         Do you rent or own your home?
       </h1>
       <div className="mt-8 flex w-full flex-col gap-3 lg:mt-10">
