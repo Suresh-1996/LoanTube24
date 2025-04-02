@@ -11,7 +11,7 @@ const RequestAmountPage = () => {
   return (
     <div className="w-screen px-3 md:px-16 lg:px-48 xl:px-100 2xl:px-160">
       <div className="flex w-full flex-col items-center py-8 lg:py-16">
-        <h1 className="text-center font-serif text-[34px] leading-10 font-medium md:text-[44px] md:leading-14">
+        <h1 className="font-playfair text-center text-[34px] leading-10 font-semibold md:text-[44px] md:leading-14">
           What's your estimated <br /> debt balance?
         </h1>
         <div className="relative mt-8 flex w-full flex-col items-center gap-3 lg:mt-12">
@@ -32,10 +32,10 @@ const RequestAmountPage = () => {
               className="h-4 w-full cursor-pointer appearance-none rounded-lg"
             />
           </div>
-          <span className="absolute start-0 -bottom-9 text-sm font-medium md:text-base">
+          <span className="absolute start-0 -bottom-9 text-sm font-semibold md:text-base">
             $2,000
           </span>
-          <span className="absolute end-0 -bottom-9 text-sm font-medium md:text-base">
+          <span className="absolute end-0 -bottom-9 text-sm font-semibold md:text-base">
             $100,000
           </span>
         </div>
