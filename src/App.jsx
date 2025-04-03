@@ -1,14 +1,14 @@
 import React from "react";
-import Navbar from "./components/navbar";
-import HeroSection from "./components/HeroSection";
-import LoanPlusAdvantages from "./components/LoanPlusAdvantages";
-import WhoUseServices from "./components/WhoUseServices";
-import StepToGetLoan from "./components/StepToGetLoan";
-import ClearLoanTerms from "./components/ClearLoanTerms";
-import CustomerReview from "./components/CustomerReview";
+import Navbar from "./pages/navbar";
+import HeroSection from "./pages/HeroSection";
+import LoanPlusAdvantages from "./pages/LoanPlusAdvantages";
+import WhoUseServices from "./pages/WhoUseServices";
+import StepToGetLoan from "./pages/StepToGetLoan";
+import ClearLoanTerms from "./pages/ClearLoanTerms";
+import CustomerReview from "./pages/CustomerReview";
 
-import InfoLoan from "./components/InfoLoan";
-import Footer from "./components/Footer";
+import InfoLoan from "./pages/InfoLoan";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
