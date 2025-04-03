@@ -1,12 +1,15 @@
-import { useState } from "react"
-import RadioButton from "../components/RadioButton"
+import { useState } from "react";
+import RadioButton from "../components/RadioButton";
+import { useNavigate } from "react-router-dom";
 
 const LoanPurposePage = () => {
-  const [selected, setSelected] = useState("")
+  const [selected, setSelected] = useState("");
+  const navigate = useNavigate();
 
   const handlePurposeChange = (selectedItem) => {
-    setSelected(selectedItem)
-  }
+    setSelected(selectedItem);
+    navigate("/requestAmountPage");
+  };
 
   const purposes = [
     "Debt consolidation",
@@ -23,7 +26,7 @@ const LoanPurposePage = () => {
     "Wedding",
     "IRS tax debt",
     "Other",
-  ]
+  ];
 
   return (
     <div className="flex w-full flex-col items-center px-4 py-8 md:px-16 lg:px-48 lg:py-16 xl:px-101 2xl:px-161">
@@ -41,7 +44,7 @@ const LoanPurposePage = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LoanPurposePage
+export default LoanPurposePage;

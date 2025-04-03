@@ -1,16 +1,52 @@
 import React from "react";
 import { IoLogIn } from "react-icons/io5";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div>
-      <nav className="bg-white py-4 ">
-        <div className="max-w-6xl mx-auto px-4 pt-2 flex items-center justify-between  ">
+    <div
+      className={`fixed top-0 left-0 w-full bg-white  transition-all duration-300 z-50 ${
+        isScrolled ? "shadow-md" : "shadow-none"
+      }`}
+    >
+      <nav
+        className={`bg-white transition-all duration-300 ${
+          isScrolled ? "py-3" : "py-6"
+        }`}
+      >
+        <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center">
-            <span className="text-xl font-bold mr-1">Loan</span>
+          <div className="flex items-center transition-all duration-300">
+            <span
+              className={`font-bold mr-1 transition-all duration-300 ${
+                isScrolled ? "text-lg" : "text-xl"
+              }`}
+            >
+              Loan
+            </span>
             <div className="relative">
-              <span className="text-xl font-bold text-[#EE5A30]">
+              <span
+                className={`font-bold text-[#EE5A30] transition-all duration-300 ${
+                  isScrolled ? "text-lg" : "text-xl"
+                }`}
+              >
                 (Tube 24)
               </span>
             </div>

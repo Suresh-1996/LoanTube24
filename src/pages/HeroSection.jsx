@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
 const HeroSection = () => {
@@ -6,9 +7,14 @@ const HeroSection = () => {
   const [loanAmount, setLoanAmount] = useState(128000);
   const [showPromo, setShowPromo] = useState(false);
   const [promoCode, setPromoCode] = useState("");
+  const navigate = useNavigate();
+
+  const hadleClick = (event) => {
+    navigate("/loanPurpose");
+  };
 
   return (
-    <div className="w-full flex items-center justify-center">
+    <div className="w-full flex items-center justify-center pt-30">
       <div className=" flex w-6xl flex-initial pb-25">
         <div className="w-1/2  py-6 pb-14 bg-[#EE5A30] border-none rounded-l-xl">
           <div className=" mt-12">
@@ -85,6 +91,7 @@ const HeroSection = () => {
 
               {/* Button */}
               <button
+                onClick={hadleClick}
                 className="w-full py-3 text-white rounded-full text-lg font-bold transition duration-300"
                 style={{
                   background:

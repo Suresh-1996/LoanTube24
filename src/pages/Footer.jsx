@@ -7,7 +7,7 @@ const Footer = () => {
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
 
   return (
-    <footer className="bg-[#282828] text-white py-10 ">
+    <footer className="bg-[#330b00] text-white py-10 ">
       <div className=" flex  flex-col w-6xl mx-auto">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-3  gap-8 mb-8">
