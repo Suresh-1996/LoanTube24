@@ -1,28 +1,30 @@
-import React from "react";
-import { IoLogIn } from "react-icons/io5";
-import { useState, useEffect } from "react";
+import React from "react"
+import { IoLogIn } from "react-icons/io5"
+import { useState, useEffect } from "react"
 
-const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+const Navbar = ({ open }) => {
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        setIsScrolled(true);
+        setIsScrolled(true)
       } else {
-        setIsScrolled(false);
+        setIsScrolled(false)
       }
-    };
+    }
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll)
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full bg-white  transition-all duration-300 z-50 ${
+      className={`fixed ${
+        open ? "top-17" : "top-0"
+      } left-0 w-full bg-white  transition-all duration-300 z-50 ${
         isScrolled ? "shadow-md" : "shadow-none"
       }`}
     >
@@ -96,7 +98,7 @@ const Navbar = () => {
         </div>
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
