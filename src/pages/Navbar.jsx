@@ -28,7 +28,7 @@ const Navbar = ({ open }) => {
   return (
     <div
       className={`fixed ${
-        open ? "top-17" : "top-0"
+        open ? "lg:top-17 top-15" : "top-0"
       } left-0 w-full bg-white  transition-all duration-300 z-50 ${
         isScrolled ? "shadow-md" : "shadow-none"
       }`}
