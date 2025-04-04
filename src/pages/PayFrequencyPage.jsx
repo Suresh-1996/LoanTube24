@@ -1,12 +1,15 @@
-import { useState } from "react"
-import RadioButton from "../components/RadioButton"
+import { useState } from "react";
+import RadioButton from "../components/RadioButton";
+import { useNavigate } from "react-router-dom";
 
 const PayFrequencyPage = () => {
-  const [selected, setSelected] = useState("")
+  const [selected, setSelected] = useState("");
+  const navigate = useNavigate();
 
   const handlePurposeChange = (selectedItem) => {
-    setSelected(selectedItem)
-  }
+    setSelected(selectedItem);
+    navigate("/annualIncomePage");
+  };
 
   const payFrequencies = [
     { title: "Weekly", subtitle: "I get paid every week" },
@@ -14,7 +17,7 @@ const PayFrequencyPage = () => {
     { title: "Semi-Monthly", subtitle: "I get paid twice per month" },
     { title: "Monthly", subtitle: "I get paid once per month" },
     { title: "Other", subtitle: "My pay schedule is different" },
-  ]
+  ];
 
   return (
     <div className="flex w-full flex-col items-center px-4 py-8 md:px-11 lg:px-43 lg:py-16 xl:px-95 2xl:px-155">
@@ -33,7 +36,7 @@ const PayFrequencyPage = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PayFrequencyPage
+export default PayFrequencyPage;

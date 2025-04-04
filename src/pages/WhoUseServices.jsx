@@ -7,12 +7,12 @@ const WhoUseServices = () => {
   return (
     <div className="flex items-center justify-center w-full ">
       <div className=" flex w-6xl  pb-10 flex-col flex-initial justify-center items-center">
-        <div className="pt-16 pb-8 font-semibold">
-          <h1 className="text-[32px] font-bold text-[#0C122A]">
+        <div className="flex flex-col justify-center items-center text-center pt-16 pb-8 font-semibold">
+          <h1 className="text-[28px] md:text-[32px] font-bold text-black ">
             Who can use our services ?
           </h1>
         </div>
-        <div className="grid grid-cols-3 gap-10 group w-full ">
+        <div className="grid lg:grid-cols-3 lg:gap-10 group w-full grid-cols-1 gap-2 px-2 lg:px-0">
           <div className="border-none rounded-xl shadow-md  bg-[#fa6237]   ">
             <div className="flex  p-5 justify-self-start flex-col ">
               <div className="pb-4">

@@ -1,12 +1,18 @@
-import { useState } from "react"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AnnualIncomePage = () => {
-  const [value, setValue] = useState(9000)
+  const [value, setValue] = useState(9000);
+  const navigate = useNavigate();
 
-  const min = 0
-  const max = 150000
+  const handleClick = () => {
+    navigate("/housingTypePage");
+  };
 
-  const progress = ((value - min) / (max - min)) * 100
+  const min = 0;
+  const max = 150000;
+
+  const progress = ((value - min) / (max - min)) * 100;
 
   return (
     <div className="w-screen px-3 md:px-16 lg:px-48 xl:px-100 2xl:px-160">
@@ -19,8 +25,8 @@ const AnnualIncomePage = () => {
             {value.toLocaleString() === "0"
               ? "No Income"
               : value.toLocaleString() === "150,000"
-                ? "Over $150000+"
-                : `$${value.toLocaleString()}`}
+              ? "Over $150000+"
+              : `$${value.toLocaleString()}`}
           </h2>
           <div className="w-full px-4">
             <input
@@ -43,7 +49,10 @@ const AnnualIncomePage = () => {
             Over $150,000+
           </span>
         </div>
-        <button className="mt-15 w-full cursor-pointer rounded-sm bg-[#006642] p-4 text-sm font-bold text-white">
+        <button
+          onClick={handleClick}
+          className="mt-15 w-full cursor-pointer rounded-sm bg-[#006642] p-4 text-sm font-bold text-white"
+        >
           CONTINUE
         </button>
         <p className="mt-8 text-center text-xs">
@@ -57,7 +66,7 @@ const AnnualIncomePage = () => {
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AnnualIncomePage
+export default AnnualIncomePage;

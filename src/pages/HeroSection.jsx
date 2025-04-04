@@ -14,21 +14,49 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="w-full flex items-center justify-center pt-30">
-      <div className=" flex w-6xl flex-initial pb-25">
-        <div className="w-1/2  py-6 pb-14 bg-[#EE5A30] border-none rounded-l-xl">
-          <div className=" mt-12">
-            <div className="max-w-md mx-auto ">
-              <h1 className="text-4xl font-bold">Get online loan</h1>
+    <div className="w-full flex items-center justify-center lg:pt-30 ">
+      <div className=" flex w-6xl flex-initial lg:pb-25 pb-2 lg:flex-row flex-col">
+        <div className="lg:w-1/2  py-6 pb-14 bg-[#EE5A30] border-none lg:rounded-l-xl">
+          <div className=" mt-12 ">
+            {/* lg screen */}
+            <div className="max-w-md mx-auto lg:block hidden px-3   ">
+              <h1 className="text-4xl  font-bold">Get online loan</h1>
               <h1 className="text-4xl font-bold ">
-                up to <span className="text-[#6552D8]">$200 000</span>
+                up to <span className="text-white">200 000</span>
               </h1>
               <div className="pt-4 pb-8">
-                <button className="bg-white rounded-full py-2 px-3 text-base font-semibold text-[#4d4d4d]">
+                <button className="bg-white rounded-full lg:py-2 py-1 px-2 lg:px-3 lg:text-base text-sm font-semibold text-[#4d4d4d]">
                   Loan cost <span className="font-bold">from 0,01%</span>
                 </button>
               </div>
             </div>
+
+            {/* mobile view */}
+            <div className="flex lg:hidden px-4  justify-between items-center ">
+              <div className="w-1/2">
+                <h1 className="lg:text-4xl text-xl font-bold">
+                  Get online loan
+                </h1>
+                <h1 className="lg:text-4xl text-xl font-bold ">
+                  up to <span className="text-white">200 000</span>
+                </h1>
+                <div className="pt-4 pb-8">
+                  <button className="bg-white rounded-full lg:py-2 py-1 px-2 lg:px-3 lg:text-base text-sm font-semibold text-[#4d4d4d]">
+                    Loan cost <span className="font-bold">from 0,01%</span>
+                  </button>
+                </div>
+              </div>
+              <div className="w-1/2">
+                <div className=" lg:hidden  lg:w-1/2 bg-[#EE5A30] flex justify-center items-center ">
+                  <img
+                    src="wladies.png"
+                    alt="ladies image"
+                    className="w-[200px] h-[150px]"
+                  />
+                </div>
+              </div>
+            </div>
+
             <div className="max-w-sm mx-auto p-6 bg-white rounded-2xl shadow-md text-center space-y-6">
               {/* Tabs */}
               <div className="flex justify-center bg-[#fcd9cf] p-1 rounded-full">
@@ -72,11 +100,11 @@ const HeroSection = () => {
                   Loan amount
                 </div>
                 <div className="flex justify-between text-xs text-gray-400 mb-1">
-                  <span>$ 5 000</span>
+                  <span>5 000</span>
                   <span className="text-black font-bold text-base ">
-                    $ {loanAmount.toLocaleString()}
+                    {loanAmount.toLocaleString()}
                   </span>
-                  <span>$ 200 000</span>
+                  <span>200 000</span>
                 </div>
                 <input
                   type="range"
@@ -139,7 +167,7 @@ const HeroSection = () => {
           </div>
         </div>{" "}
         {/* #E6E1FF */}
-        <div className="w-1/2 bg-[#EE5A30] border-none rounded-r-xl ">
+        <div className=" lg:block hidden lg:w-1/2 bg-[#EE5A30] border-none lg:rounded-r-xl ">
           <div className=" flex-wrap group relative  mt-12 py-2 ">
             <div className="absolute border flex-wrap group right-0 mt-4  "></div>
             <img src="wladies.png" alt="ladies image" />

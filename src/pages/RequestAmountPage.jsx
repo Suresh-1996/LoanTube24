@@ -1,12 +1,18 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const RequestAmountPage = () => {
   const [value, setValue] = useState(9000);
+  const naviagte = useNavigate();
 
   const min = 2000;
   const max = 100000;
 
   const progress = ((value - min) / (max - min)) * 100;
+
+  const handleOnclick = () => {
+    naviagte("/creditRatingPage");
+  };
 
   return (
     <div className="w-screen px-3 md:px-16 lg:px-48 xl:px-100 2xl:px-160">
@@ -39,7 +45,10 @@ const RequestAmountPage = () => {
             $100,000
           </span>
         </div>
-        <button className="mt-15 w-full cursor-pointer rounded-sm bg-[#006642] p-4 text-sm font-bold text-white">
+        <button
+          onClick={handleOnclick}
+          className="mt-15 w-full cursor-pointer rounded-sm bg-[#006642] p-4 text-sm font-bold text-white"
+        >
           CONTINUE
         </button>
       </div>

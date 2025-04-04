@@ -1,18 +1,21 @@
-import { useState } from "react"
-import RadioButton from "../components/RadioButton"
+import { useState } from "react";
+import RadioButton from "../components/RadioButton";
+import { useNavigate } from "react-router-dom";
 
 const HousingTypePage = () => {
-  const [selected, setSelected] = useState("")
+  const [selected, setSelected] = useState("");
+  const navigate = useNavigate();
 
   const handlePurposeChange = (selectedItem) => {
-    setSelected(selectedItem)
-  }
+    setSelected(selectedItem);
+    navigate("/dateofBirthPage");
+  };
 
   const housingTypes = [
     { title: "Renter", subtitle: "I am renting my current residence" },
     { title: "Homeowner", subtitle: "I own my current residence" },
     { title: "Other", subtitle: "Neither of these apply to me" },
-  ]
+  ];
 
   return (
     <div className="flex w-full flex-col items-center px-7 py-8 md:px-13 lg:px-45 lg:py-16 xl:px-89 2xl:px-157">
@@ -31,7 +34,7 @@ const HousingTypePage = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HousingTypePage
+export default HousingTypePage;

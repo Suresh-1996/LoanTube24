@@ -15,6 +15,14 @@ import LoanPurposePage from "./pages/LoanPurposePage";
 import RequestAmountPage from "./pages/RequestAmountPage";
 import CreditRatingPage from "./pages/CreditRatingPage";
 import Layout from "./layout/Layout";
+import EmploymentStatusPage from "./pages/EmploymentStatusPage";
+import PayFrequencyPage from "./pages/PayFrequencyPage";
+import AnnualIncomePage from "./pages/AnnualIncomePage";
+import HousingTypePage from "./pages/HousingTypePage";
+import DateofBirthPage from "./pages/DateofBirthPage";
+import ZipCodePage from "./pages/ZipCodePage";
+import StreetAddressPage from "./pages/StreetAddressPage";
+import GreetingPage from "./pages/GreetingPage";
 
 function App() {
   return (
@@ -37,10 +45,22 @@ function App() {
             </>
           }
         />
+        \
         <Route path="/loanPurpose" element={<LoanPurposePage />} />
         <Route path="/" element={<Layout />}>
           <Route path="requestAmountPage" element={<RequestAmountPage />} />
           <Route path="creditRatingPage" element={<CreditRatingPage />} />
+          <Route
+            path="employmentStatusPage"
+            element={<EmploymentStatusPage />}
+          />
+          <Route path="payFrequencyPage" element={<PayFrequencyPage />} />
+          <Route path="annualIncomePage" element={<AnnualIncomePage />} />
+          <Route path="housingTypePage" element={<HousingTypePage />} />
+          <Route path="dateofBirthPage" element={<DateofBirthPage />} />
+          <Route path="zipCodePage" element={<ZipCodePage />} />
+          <Route path="streetAddressPage" element={<StreetAddressPage />} />
+          <Route path="greetingPage" element={<GreetingPage />} />
         </Route>
       </Routes>
     </Router>

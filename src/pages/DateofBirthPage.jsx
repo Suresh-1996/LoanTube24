@@ -1,25 +1,31 @@
-import React from "react"
-import SelectInput from "../components/SelectInput"
+import React from "react";
+import SelectInput from "../components/SelectInput";
+import { useNavigate } from "react-router-dom";
 
 const DateofBirthPage = () => {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/zipCodePage");
+  };
 
   const months = Array.from({ length: 12 }, (_, i) => ({
     label: new Date(0, i).toLocaleString("default", { month: "long" }),
     value: new Date(0, i)
       .toLocaleString("default", { month: "long" })
       .toLowerCase(),
-  }))
+  }));
 
   const dates = Array.from({ length: 31 }, (_, i) => ({
     label: i + 1,
     value: i + 1,
-  }))
+  }));
 
   const years = Array.from({ length: currentYear - 1900 + 1 }, (_, i) => ({
     label: 1900 + i,
     value: 1900 + i,
-  })).reverse()
+  })).reverse();
 
   return (
     <div className="w-screen px-3 md:px-16 lg:px-48 xl:px-100 2xl:px-160">
@@ -32,12 +38,15 @@ const DateofBirthPage = () => {
           <SelectInput label="Birth Day" options={dates} />
           <SelectInput label="Birth Year" options={years} />
         </div>
-        <button className="mt-8 w-full cursor-pointer rounded-sm bg-[#006642] p-4 text-sm font-bold text-white">
+        <button
+          onClick={handleClick}
+          className="mt-8 w-full cursor-pointer rounded-sm bg-[#006642] p-4 text-sm font-bold text-white"
+        >
           CONTINUE
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DateofBirthPage
+export default DateofBirthPage;

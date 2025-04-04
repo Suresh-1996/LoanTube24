@@ -4,12 +4,13 @@ const LoanPlusAdvantages = () => {
   return (
     <div className="flex items-center justify-center w-full bg-[#fa6237] ">
       <div className=" flex w-6xl flex-col flex-initial justify-center items-center">
-        <div className="pt-16 pb-8 font-semibold">
-          <h1 className="text-[32px] font-bold text-white">
+        <div className="flex flex-col justify-center items-center text-center pt-16 pb-8 font-semibold">
+          <h1 className="text-[28px] md:text-[32px] font-bold text-white ">
             LoanPlus advantages
           </h1>
         </div>
-        <div className="grid grid-cols-3 gap-10 ">
+
+        <div className="grid lg:grid-cols-3 lg:gap-10 grid-cols-1 gap-2 px-2 lg:px-0 ">
           <div className="border-none rounded-xl shadow-md  bg-white  w-full ">
             <div className="flex  p-5 items-center justify-center flex-col">
               <div>
