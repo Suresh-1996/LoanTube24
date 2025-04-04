@@ -1,12 +1,14 @@
-import { useState } from "react"
-import RadioButton from "../components/RadioButton"
+import { useState } from "react";
+import RadioButton from "../components/RadioButton";
+import { useNavigate } from "react-router-dom";
 
 const EmploymentStatusPage = () => {
-  const [selected, setSelected] = useState("")
-
+  const [selected, setSelected] = useState("");
+  const navigate = useNavigate();
   const handlePurposeChange = (selectedItem) => {
-    setSelected(selectedItem)
-  }
+    setSelected(selectedItem);
+    navigate("/payFrequencyPage");
+  };
 
   const employmentStatus = [
     { title: "Full Time", subtitle: "I work 30+ hours per week" },
@@ -16,7 +18,7 @@ const EmploymentStatusPage = () => {
     { title: "Military", subtitle: "I am in the military" },
     { title: "Unemployed", subtitle: "I am currently unemployed" },
     { title: "Other", subtitle: "My employment status is different" },
-  ]
+  ];
 
   return (
     <div className="flex w-full flex-col items-center px-6 py-8 md:px-14 lg:px-46 lg:py-16 xl:px-97 2xl:px-158">
@@ -35,7 +37,7 @@ const EmploymentStatusPage = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default EmploymentStatusPage
+export default EmploymentStatusPage;

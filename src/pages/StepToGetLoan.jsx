@@ -7,12 +7,13 @@ const StepToGetLoan = () => {
   return (
     <div className="flex items-center justify-center w-full bg-[#fa6237]">
       <div className=" flex w-6xl  pb-10 flex-col flex-initial justify-center items-center">
-        <div className="pt-16 pb-8 font-semibold">
-          <h1 className="text-[32px] font-bold text-white">
+        <div className="flex flex-col justify-center items-center text-center pt-16 pb-8 font-semibold">
+          <h1 className="text-[28px] md:text-[32px] font-bold text-white ">
             Easy and fast services to get loan
           </h1>
         </div>
-        <div className="grid grid-cols-4 gap-10 group w-full ">
+
+        <div className="grid lg:grid-cols-4 lg:gap-10 grid-cols-1 gap-2 group w-full px-2 lg:px-0">
           <div className="border-none rounded-xl shadow-md  bg-white  ">
             <div className="flex  p-5 justify-start flex-col ">
               <div className="flex justify-center items-center w-[50px] h-[50px] rounded-full bg-[#fcd9cf] ">

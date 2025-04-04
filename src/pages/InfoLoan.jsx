@@ -13,13 +13,13 @@ const InfoLoan = () => {
   };
 
   return (
-    <div className="w-6xl mx-auto py-6 bg-white ">
-      <h2 className="text-xl font-bold text-gray-700 mb-4">
+    <div className="lg:w-6xl mx-auto py-6 bg-white px-2 lg:px-0 ">
+      <h2 className="text-xl font-bold text-gray-700 mb-4 w-full   ">
         Information about the owner of the website providing payday loans online
       </h2>
 
-      <div className="mb-6">
-        <p className="text-gray-700 mb-4">
+      <div className="mb-6 ">
+        <p className="text-gray-700 mb-4  text-justify  ">
           Welcome to LoanPlus, your one-stop solution for hassle-free online
           cash loans in Sri Lanka! We understand that unexpected expenses can be
           a major headache, but with our quick and easy loan services, you can
@@ -38,7 +38,7 @@ const InfoLoan = () => {
             <h1 className="font-semibold mb-4 text-[26px]">
               How to get a profitable loan online?
             </h1>
-            <p className="text-gray-700 mb-4 ">
+            <p className="text-gray-700 mb-4 text-justify ">
               Online loans are an excellent option if you’re facing unexpected
               expenses or struggling to make ends meet. With just a few clicks,
               you can apply for a loan and receive the money you need to get
@@ -46,7 +46,7 @@ const InfoLoan = () => {
               even months to process, but with online cash loans, you’ll have
               the funds in your account in no time.
             </p>
-            <p>
+            <p className="text-justify ">
               Whether you need to pay off bills, cover medical expenses, or
               anything else, an online cash loan is a great way to get the
               monetary support you need without any hassle.Whether you need to
@@ -57,7 +57,7 @@ const InfoLoan = () => {
             <h1 className="font-semibold mb-4 text-[26px]">
               How can online loans help you out?
             </h1>
-            <p>
+            <p className="text-justify ">
               Looking for a way to handle those unexpected expenses without
               scrambling for cash? Look no further than online loans! In Sri
               Lanka, fast and easy access to credit can provide you with the
@@ -70,7 +70,7 @@ const InfoLoan = () => {
             <h2 className="text-xl font-bold text-gray-700 mb-4">
               Delayed wages and unexpected expenses:
             </h2>
-            <p>
+            <p className="text-justify ">
               Do you have bills to pay, but you’re waiting for your paycheck? An
               online loan can be a great bridge between now and then, allowing
               you to cover the costs until you receive your salary.
@@ -78,7 +78,7 @@ const InfoLoan = () => {
             <h2 className="text-xl font-bold text-gray-700 mb-4">
               Covering medical expenses:
             </h2>
-            <p>
+            <p className="text-justify ">
               Unexpected medical bills can quickly add up, leaving you feeling
               overwhelmed. With an online loan, you can get instant access to
               cash to cover straightforward medical treatments or long-term
@@ -87,7 +87,7 @@ const InfoLoan = () => {
             <h2 className="text-xl font-bold text-gray-700 mb-4">
               Home improvements:
             </h2>
-            <p>
+            <p className="text-justify ">
               A loan can help you cover the costs of home repairs and
               renovations, giving your house the facelift it needs while staying
               within budget.
@@ -95,12 +95,12 @@ const InfoLoan = () => {
             <h2 className="text-xl font-bold text-gray-700 mb-4">
               Vacation and travel expenses:
             </h2>
-            <p>
+            <p className="text-justify ">
               A loan can help you cover the costs of that special vacation or a
               weekend getaway, allowing you to enjoy your well-earned break
               without breaking the bank.
             </p>
-            <p>
+            <p className="text-justify ">
               No matter what unexpected situation arises, an online cash loan is
               a great way to get the funds you need quickly and easily. Start
               your journey with LoanPlus today!
@@ -111,7 +111,7 @@ const InfoLoan = () => {
               Where is the easiest and fastest way to get a loan online in Sri
               Lanka?
             </h1>
-            <p>
+            <p className="text-justify ">
               If you’re looking for the easiest and fastest way to get a loan
               online in Sri Lanka, it’s important to know that most online
               lending services are only provided by MFOs. Banks may have online
@@ -119,7 +119,7 @@ const InfoLoan = () => {
               for in-person communication with a credit manager. This can lead
               to a registration process that lasts several working days.
             </p>
-            <p>
+            <p className="text-justify">
               However, if you’re in need of quick online credit in Sri Lanka,
               LoanPlus offers a user-friendly approach where you can easily and
               efficiently fill out your application details and provide the
@@ -132,7 +132,7 @@ const InfoLoan = () => {
             <h1 className="font-semibold  mb-4 text-[26px]">
               How to apply for a loan
             </h1>
-            <p>
+            <p className="text-justify">
               Applying for an online loan has never been easier! With LoanPlus,
               you can complete the entire process from the comfort of your own
               home in just a few simple steps
@@ -140,7 +140,7 @@ const InfoLoan = () => {
             <h2 className="text-xl font-bold text-gray-700 mb-4">
               Step 1: Create your account
             </h2>
-            <p>
+            <p className="text-justify">
               To get started, simply complete a short form with your personal
               data using your ID and phone number. This shouldn’t take you more
               than a few minutes.
@@ -148,18 +148,18 @@ const InfoLoan = () => {
             <h2 className="text-xl font-bold text-gray-700 mb-4">
               Step 2: Sign the contract
             </h2>
-            <p>
+            <p className="text-justify">
               Next, confirm your consent to obtain the loan online. You’ll
               receive a confirmation code via SMS.
             </p>
             <h2 className="text-xl font-bold text-gray-700 mb-4">
               Step 3: Get the money
             </h2>
-            <p>
+            <p className="text-justify">
               We’ll transfer up to Rs 200,000 in cash or a loan to your account
               instantly in just over a minute!
             </p>
-            <p>
+            <p className="text-justify">
               Don’t let the loan application process stress you out. With
               LoanPlus, you’ll have the money you need when you need it, all
               with just a few clicks.
@@ -167,13 +167,13 @@ const InfoLoan = () => {
             <h1 className="font-semibold mb-4 text-[26px]">
               Get our Hassle-Free Loan to Card! System
             </h1>
-            <p>
+            <p className="text-justify">
               With our online loan system, you can have your loan deposited
               directly onto any bank card without any extra steps. Plus, our
               extensive network of partner banks ensures that your loan will be
               conveniently applied to the card of your choosing.
             </p>
-            <p>
+            <p className="text-justify">
               But wait, there’s more! Our services are available 24/7, meaning
               you can apply for your loan at any time, even on weekends and
               holidays. Our user-friendly online application makes the process a
@@ -182,7 +182,7 @@ const InfoLoan = () => {
             <h1 className="font-semibold mb-4 text-[26px]">
               Who Qualifies for our Online Loan
             </h1>
-            <p>
+            <p className="text-justify">
               In order to get an online loan on your card, you simply need to
               meet the following requirements:
             </p>
@@ -200,14 +200,14 @@ const InfoLoan = () => {
                 Driving License for identification purposes
               </li>
             </ul>
-            <p>
+            <p className="text-justify">
               That’s it! With LoanPlus, getting an online loan has never been
               easier. Apply today and get the funds you need when you need them.
             </p>
             <h1 className="font-semibold mb-4 text-[26px]">
               Tips for Taking Online Loan
             </h1>
-            <p>
+            <p className="text-justify">
               Getting an online loan can be a great way to cover monetary
               emergencies or make necessary investments. However, it’s important
               to make sure you use the funds responsibly. Here are some tips to
@@ -233,14 +233,14 @@ const InfoLoan = () => {
                 budgeting accordingly.
               </li>
             </ul>
-            <p>
+            <p className="text-justify">
               By following these simple tips, you can make sure that taking an
               online loan is a hassle-free and beneficial experience. With
               LoanPlus, you can get the money you need quickly, securely, and
               conveniently. Get started today!
             </p>
             <h1 className="font-semibold mb-4 text-[26px]">Get in Touch!</h1>
-            <p>
+            <p className="text-justify">
               If you have any questions about our online loan services, please
               feel free to contact us. Our customer service representatives are
               always happy to assist and answer any of your queries. Apply today

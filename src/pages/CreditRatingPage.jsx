@@ -1,19 +1,21 @@
-import { useState } from "react"
-import RadioButton from "../components/RadioButton"
-
+import { useState } from "react";
+import RadioButton from "../components/RadioButton";
+import { useNavigate } from "react-router-dom";
 const CreditRatingPage = () => {
-  const [selected, setSelected] = useState("")
+  const [selected, setSelected] = useState("");
+  const navigate = useNavigate();
 
   const handlePurposeChange = (selectedItem) => {
-    setSelected(selectedItem)
-  }
+    setSelected(selectedItem);
+    navigate("/employmentStatusPage");
+  };
 
   const rates = [
     { title: "Excellent", subtitle: "720 or higher" },
     { title: "Good", subtitle: "680 - 719" },
     { title: "Fair", subtitle: "640 - 679" },
     { title: "Poor", subtitle: "Less than 640" },
-  ]
+  ];
 
   return (
     <div className="flex w-full flex-col items-center px-4 py-8 md:px-14 lg:px-46 lg:py-16 xl:px-98 2xl:px-158">
@@ -32,7 +34,7 @@ const CreditRatingPage = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CreditRatingPage
+export default CreditRatingPage;

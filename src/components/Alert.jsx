@@ -20,7 +20,7 @@ const Alert = ({ setOpen }) => {
         </div>
         <div
           className="ml-[0.9375rem] cursor-pointer"
-          onClick={prev => setOpen(!prev)}
+          onClick={() => setOpen(false)}
         >
           <X className="text-gray-400" size={18} />
         </div>

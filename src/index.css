@@ -5,3 +5,10 @@
 @theme{
     --font-inter: Inter, sans-serif;
 }
+/* @theme {
+  --color-*: initial;
+  --color-orangeSoft: #fcd9cf;
+  --color-orangeLightBg: #fa6237;
+  --color-orangeDark: #9c2402 ;
+  --color-orangeMain:#EE5A30;
+} */
