@@ -1,20 +1,24 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { FiChevronDown, FiChevronUp } from "react-icons/fi"
 
-const HeroSection = () => {
-  const [isNewClient, setIsNewClient] = useState(true);
-  const [loanAmount, setLoanAmount] = useState(128000);
-  const [showPromo, setShowPromo] = useState(false);
-  const [promoCode, setPromoCode] = useState("");
-  const navigate = useNavigate();
+const HeroSection = ({ open }) => {
+  const [isNewClient, setIsNewClient] = useState(true)
+  const [loanAmount, setLoanAmount] = useState(128000)
+  const [showPromo, setShowPromo] = useState(false)
+  const [promoCode, setPromoCode] = useState("")
+  const navigate = useNavigate()
 
-  const hadleClick = (event) => {
-    navigate("/loanPurpose");
-  };
+  const hadleClick = () => {
+    navigate("/loanPurpose")
+  }
 
   return (
-    <div className="w-full flex items-center justify-center pt-30">
+    <div
+      className={`w-full flex items-center justify-center pt-30 ${
+        open && "mt-[4.375rem]"
+      }`}
+    >
       <div className=" flex w-6xl flex-initial pb-25">
         <div className="w-1/2  py-6 pb-14 bg-[#EE5A30] border-none rounded-l-xl">
           <div className=" mt-12">
@@ -84,7 +88,7 @@ const HeroSection = () => {
                   max="200000"
                   step="1000"
                   value={loanAmount}
-                  onChange={(e) => setLoanAmount(e.target.value)}
+                  onChange={e => setLoanAmount(e.target.value)}
                   className="w-full h-3 accent-[#EE5A30] "
                 />
               </div>
@@ -97,11 +101,11 @@ const HeroSection = () => {
                   background:
                     "radial-gradient(125% 125% at 85.42% 0%, #9c2402 0%, #EE5A30 100%)",
                 }}
-                onMouseEnter={(e) =>
+                onMouseEnter={e =>
                   (e.target.style.background =
                     "radial-gradient(125% 110% at 50% -10%, #9c2402 0%, #EE5A30 100%)")
                 }
-                onMouseLeave={(e) =>
+                onMouseLeave={e =>
                   (e.target.style.background =
                     "radial-gradient(125% 135% at 85.42% 0%, #9c2402 0%, #EE5A30 100%)")
                 }
@@ -126,7 +130,7 @@ const HeroSection = () => {
                       type="text"
                       placeholder="Enter promo-code"
                       value={promoCode}
-                      onChange={(e) => setPromoCode(e.target.value)}
+                      onChange={e => setPromoCode(e.target.value)}
                       className="w-full px-4 py-2 border-1 border-gray-400 rounded-lg focus:outline-none placeholder:font-bold placeholder:text-sm"
                     />
                     <button className=" py-2 px-3 bg-[#EE5A30] text-white font-semibold rounded-lg hover:bg-[#9c2402] transition">
@@ -147,7 +151,7 @@ const HeroSection = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection
