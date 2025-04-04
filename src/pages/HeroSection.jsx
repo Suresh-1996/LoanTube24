@@ -13,8 +13,6 @@ const HeroSection = ({ open }) => {
     navigate("/loanPurpose")
   }
 
-  console.log(open)
-
   return (
     <div
       className={`w-full flex items-center justify-center lg:pt-30 ${
