@@ -1,22 +1,33 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import FloatingContact from "./components/FloatingContact";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import FloatingContact from "./components/FloatingContact"
 
-import React from "react";
-import Navbar from "./pages/navbar";
-import HeroSection from "./pages/HeroSection";
-import LoanPlusAdvantages from "./pages/LoanPlusAdvantages";
-import WhoUseServices from "./pages/WhoUseServices";
-import StepToGetLoan from "./pages/StepToGetLoan";
-import ClearLoanTerms from "./pages/ClearLoanTerms";
-import CustomerReview from "./pages/CustomerReview";
-import InfoLoan from "./pages/InfoLoan";
-import Footer from "./pages/Footer";
-import LoanPurposePage from "./pages/LoanPurposePage";
-import RequestAmountPage from "./pages/RequestAmountPage";
-import CreditRatingPage from "./pages/CreditRatingPage";
-import Layout from "./layout/Layout";
+import React, { useEffect, useState } from "react"
+import Navbar from "./pages/Navbar"
+import HeroSection from "./pages/HeroSection"
+import LoanPlusAdvantages from "./pages/LoanPlusAdvantages"
+import WhoUseServices from "./pages/WhoUseServices"
+import StepToGetLoan from "./pages/StepToGetLoan"
+import ClearLoanTerms from "./pages/ClearLoanTerms"
+import CustomerReview from "./pages/CustomerReview"
+import InfoLoan from "./pages/InfoLoan"
+import Footer from "./pages/Footer"
+import LoanPurposePage from "./pages/LoanPurposePage"
+import RequestAmountPage from "./pages/RequestAmountPage"
+import CreditRatingPage from "./pages/CreditRatingPage"
+import Layout from "./layout/Layout"
+import Alert from "./components/Alert"
 
 function App() {
+  const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setOpen(true)
+    }, 3000)
+
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <Router>
       <Routes>
@@ -24,8 +35,9 @@ function App() {
           path="/"
           element={
             <>
-              <Navbar />
-              <HeroSection />
+              {open && <Alert setOpen={setOpen} />}
+              <Navbar open={open} />
+              <HeroSection open={open} />
               <LoanPlusAdvantages />
               <WhoUseServices />
               <StepToGetLoan />
@@ -44,7 +56,7 @@ function App() {
         </Route>
       </Routes>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App
