@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import FloatingContact from "./components/FloatingContact"
-import React, {useEffect, useState} from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import FloatingContact from "./components/FloatingContact";
+import React, { useEffect, useState } from "react";
 import Navbar from "./pages/navbar";
 import HeroSection from "./pages/HeroSection";
-import LoanPlusAdvantages from "./pages/LoanPlusAdvantages";
+import LoanTubeAdvantages from "./pages/LoanTubeAdvantages";
 import WhoUseServices from "./pages/WhoUseServices";
 import StepToGetLoan from "./pages/StepToGetLoan";
 import ClearLoanTerms from "./pages/ClearLoanTerms";
@@ -22,18 +22,21 @@ import DateofBirthPage from "./pages/DateofBirthPage";
 import ZipCodePage from "./pages/ZipCodePage";
 import StreetAddressPage from "./pages/StreetAddressPage";
 import GreetingPage from "./pages/GreetingPage";
-import Alert from "./components/Alert"
+import Alert from "./components/Alert";
+import HowToBarrow from "./pages/HowToBarrow";
+import HowToRepay from "./pages/HowToRepay";
+import ContactNumber from "./pages/ContactNumber";
 
 function App() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setOpen(true)
-    }, 3000)
+      setOpen(true);
+    }, 3000);
 
-    return () => clearTimeout(timer)
-  }, [])
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <Router>
@@ -45,7 +48,7 @@ function App() {
               {open && <Alert setOpen={setOpen} />}
               <Navbar open={open} />
               <HeroSection open={open} />
-              <LoanPlusAdvantages />
+              <LoanTubeAdvantages />
               <WhoUseServices />
               <StepToGetLoan />
               <ClearLoanTerms />
@@ -72,10 +75,13 @@ function App() {
           <Route path="zipCodePage" element={<ZipCodePage />} />
           <Route path="streetAddressPage" element={<StreetAddressPage />} />
           <Route path="greetingPage" element={<GreetingPage />} />
+          <Route path="howToBarrow" element={<HowToBarrow />} />
+          <Route path="howToRepay" element={<HowToRepay />} />
+          <Route path="contactNumber" element={<ContactNumber />} />
         </Route>
       </Routes>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;

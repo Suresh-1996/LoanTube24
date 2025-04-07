@@ -5,20 +5,28 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const reviews = [
   {
-    name: "Malith",
-    text: "I searched for instant loans on Google as I was in an immediate need of money. I found LoanPlus and I applied for it. The eligibility criteria was minimal and fees were also nominal. Fast processing and disbursal as per the promise. Thank you.",
+    name: "James",
+    text: "I needed funds urgently and came across this loan site. The application was simple, and the response was quick. The loan was processed and disbursed the same day without issues.",
   },
   {
-    name: "Arosha",
-    text: "I've had a loan from this company before and have found their website easy to use and the money was in my account within a matter of minutes. Will use again if I need any more home improvements doing.",
+    name: "Emily",
+    text: "This was my second time applying here. The entire process took just minutes. Clear instructions, fast approval, and the loan was in my bank account before I knew it. Very satisfied!",
   },
   {
-    name: "Raveena",
-    text: "Excellent Support! I got my loan approved on the same day when I applied. Good service!!",
+    name: "Michael",
+    text: "Fast and reliable service! I submitted my application in the morning and had the money by evening. No unnecessary steps or delays. Everything was smooth from start to finish.",
   },
   {
-    name: "Samantha",
-    text: "Excellent Support! I got my loan approved on the same day when I applied. Good service!!",
+    name: "Sophia",
+    text: "Applying for a loan was easier than I expected. I didn’t have to visit an office, and everything was handled online. Great support and a stress-free experience overall!",
+  },
+  {
+    name: "Daniel",
+    text: "I needed help with consolidating my credit card debt, and this loan platform made it easy. The interest rate was fair, and the monthly payments were manageable. Highly recommended!",
+  },
+  {
+    name: "Olivia",
+    text: "During a recent medical emergency, I turned to this platform. The process was quick, the approval was instant, and I got the help I needed just in time. A truly dependable service.",
   },
 ];
 
@@ -29,7 +37,13 @@ const CustomerReview = () => {
   // Update visibleCount on window resize
   useEffect(() => {
     const handleResize = () => {
-      setVisibleCount(window.innerWidth < 768 ? 1 : 3); // <768px is mobile
+      if (window.innerWidth < 768) {
+        setVisibleCount(1);
+      } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+        setVisibleCount(2);
+      } else {
+        setVisibleCount(3);
+      }
     };
 
     handleResize(); // check initially

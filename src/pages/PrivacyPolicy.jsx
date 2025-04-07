@@ -220,7 +220,7 @@ const PrivacyPolicy = ({ isPrivacyOpen, onClose }) => {
                 For questions, complaints, or data requests:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li className="pl-2">Email: info@lonetube24.com</li>
+                <li className="pl-2">Email: info@loantube24.com</li>
                 <li className="pl-2">
                   <span className="font-medium">Note:</span> We will never ask
                   for sensitive data (e.g., bank PINs, OTPs) via email.
@@ -239,7 +239,7 @@ const PrivacyPolicy = ({ isPrivacyOpen, onClose }) => {
 
             <div>
               <h3 className="font-bold">For any inquiries</h3>
-              <p>contact: Email: info@lonetube24.com</p>
+              <p>contact: Email: info@loantube24.com</p>
             </div>
           </div>
         </div>

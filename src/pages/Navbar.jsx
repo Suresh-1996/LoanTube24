@@ -1,29 +1,30 @@
-import React from "react"
-import { IoLogIn, IoTimeOutline } from "react-icons/io5"
-import { useState, useEffect } from "react"
-import { BiMenu } from "react-icons/bi"
-import { IoMdClose } from "react-icons/io"
-import { MdOutlineArrowForwardIos } from "react-icons/md"
-import { FaPhone } from "react-icons/fa"
+import React from "react";
+import { IoLogIn, IoTimeOutline } from "react-icons/io5";
+import { useState, useEffect } from "react";
+import { BiMenu } from "react-icons/bi";
+import { IoMdClose } from "react-icons/io";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
+
+import { Link } from "react-router-dom";
 
 const Navbar = ({ open }) => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        setIsScrolled(true)
+        setIsScrolled(true);
       } else {
-        setIsScrolled(false)
+        setIsScrolled(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div
@@ -60,11 +61,11 @@ const Navbar = ({ open }) => {
           </div>
 
           {/* Lg screen Navigation Items */}
-          <div className=" hidden lg:block space-x-8 pr-15 text-[17px] font-normal text-[#0C122A]">
-            <a href="#" className=" hover:text-[#9c2402]">
+          <div className=" hidden lg:block space-x-8 pr-15 text-[17px] font-semibold text-[#0C122A]">
+            <a href="howToBarrow" className=" hover:text-[#9c2402]">
               How to borrow
             </a>
-            <a href="#" className=" hover:text-[#9c2402]">
+            <a href="howToRepay" className=" hover:text-[#9c2402]">
               How to repay
             </a>
             <a href="#" className="hover:text-[#9c2402]">
@@ -81,12 +82,12 @@ const Navbar = ({ open }) => {
           {/* Right side elements */}
           <div className="flex items-center lg:space-x-6">
             {/* Phone number */}
-            <a
+            {/* <a
               href="tel:+94114411122"
               className=" text-gray-800 font-medium hidden lg:text-sm"
             >
               +94 11 44 111 22
-            </a>
+            </a> */}
 
             {/* Login button */}
             <button className="bg-[#fa6237] text-white font-bold lg:text-sm lg:px-3 px-2 lg:py-2 py-1 hover:bg-[#EE5A30] rounded-full flex gap-1">
@@ -96,8 +97,8 @@ const Navbar = ({ open }) => {
 
             {/* Language selector */}
             <div className="flex items-center space-x-2 pl-2  ">
-              <span className="text-gray-800 font-medium text-sm">Eng</span>
-              <span className="text-gray-400 text-sm">සිංහල</span>
+              {/* <span className="text-gray-800 font-medium text-sm">Eng</span> */}
+              {/* <span className="text-gray-400 text-sm">සිංහල</span> */}
 
               {/* mobile toggle  */}
               <button
@@ -134,8 +135,8 @@ const Navbar = ({ open }) => {
                         </div>
                       </div>
                     </div>
-                    <div className="w-full   py-2 p-2 border-gray-200">
-                      <div className="flex justify-start items-center space-x-1 ">
+                    {/* <div className="w-full   py-2 p-2 border-gray-200"> */}
+                    {/* <div className="flex justify-start items-center space-x-1 ">
                         <div className="w-8 h-8  rounded-md flex justify-center items-center bg-amber-600">
                           <FaPhone className=" text-white size-4 " />
                         </div>
@@ -146,8 +147,8 @@ const Navbar = ({ open }) => {
                           </h3>
                           <p className="text-[8px]">Mon - Sat: 08am - 05pm</p>
                         </div>
-                      </div>
-                    </div>
+                      </div> */}
+                    {/* </div> */}
 
                     <div className="w-full   py-2 p-2 border-gray-200">
                       <div className="flex justify-start items-center space-x-1 ">
@@ -160,19 +161,19 @@ const Navbar = ({ open }) => {
                         </p>
                       </div>
                     </div>
-                    <div className="w-full border-t border-b border-gray-200 py-2 px-2">
-                      <div className="flex items-center gap-2">
+                    {/* <div className="w-full border-t border-b border-gray-200 py-2 px-2"> */}
+                    {/* <div className="flex items-center gap-2">
                         <span className="text-gray-800 font-medium text-sm">
                           Eng
                         </span>
                         <span className="text-gray-200">|</span>
                         <span className="text-gray-400 text-sm">සිංහල</span>
-                      </div>
-                    </div>
+                      </div> */}
+                    {/* </div> */}
                     <div className="w-full border-t border-b border-gray-200 py-2 px-2">
                       <div className="flex items-center justify-between">
                         <a
-                          href="#"
+                          href="howToBarrow"
                           className="text-black text-sm font-semibold hover:text-gray-200"
                         >
                           How to borrow
@@ -185,7 +186,7 @@ const Navbar = ({ open }) => {
                     <div className="w-full  border-b border-gray-200 py-2 px-2">
                       <div className="flex items-center justify-between">
                         <a
-                          href="#"
+                          href="howToRepay"
                           className="text-black text-sm font-semibold hover:text-gray-200"
                         >
                           How to replay
@@ -242,7 +243,7 @@ const Navbar = ({ open }) => {
         </div>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

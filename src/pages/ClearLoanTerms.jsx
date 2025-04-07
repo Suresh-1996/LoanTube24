@@ -12,9 +12,9 @@ const ClearLoanTerms = () => {
             Clear loan terms
           </h1>
         </div>
-        <div className="grid lg:grid-cols-3 grid-cols-1 group w-full px-2 lg:px-0 ">
-          <div className="  bg-[#fa6237] shadow-sm shadow-gray-400 min-h-35 lg:min-h-0 ">
-            <div className="flex  pt-6 pb-10 justify-center items-center flex-col lg:border-r border-gray-50  border-b lg:border-b-0">
+        <div className="grid md:grid-cols-3 grid-cols-1 group w-full px-2 lg:px-0 ">
+          <div className="  bg-[#fa6237] shadow-sm shadow-gray-400 min-h-35 md:min-h-0 ">
+            <div className="flex  pt-6 pb-10 justify-center items-center flex-col  border-gray-50  border-b md:border-b-0">
               <div className="flex flex-col  justify-center items-center gap-5 ">
                 <div>
                   <h2 className="text-[20px] font-bold text-white">Terms</h2>
@@ -27,8 +27,8 @@ const ClearLoanTerms = () => {
               </div>
             </div>
           </div>
-          <div className="  bg-[#fa6237]  border-r border-gray-50 shadow-sm min-h-35 lg:min-h-0 shadow-gray-400  ">
-            <div className="flex  pt-6 justify-center items-center flex-col lg:border-r border-gray-50  border-b lg:border-b-0 ">
+          <div className="  bg-[#fa6237]  shadow-sm min-h-35 md:min-h-0 shadow-gray-400  ">
+            <div className="flex  pt-6 justify-center items-center flex-col  border-gray-50   border-b md:border-b-0 ">
               <div className="flex flex-col justify-center items-center gap-6">
                 <div>
                   <h2 className="text-[20px] font-bold text-white">Amounts</h2>
@@ -41,7 +41,7 @@ const ClearLoanTerms = () => {
               </div>
             </div>
           </div>
-          <div className="   bg-[#fa6237] shadow-sm shadow-gray-400 min-h-35 lg:min-h-0 ">
+          <div className="   bg-[#fa6237] shadow-sm shadow-gray-400 min-h-35 md:min-h-0 ">
             <div className="flex  pt-6  justify-center items-center flex-col   ">
               <div className="flex flex-col justify-center items-center gap-6 ">
                 <div>

@@ -12,7 +12,7 @@ const WhoUseServices = () => {
             Who can use our services ?
           </h1>
         </div>
-        <div className="grid lg:grid-cols-3 lg:gap-10 group w-full grid-cols-1 gap-2 px-2 lg:px-0">
+        <div className="grid md:grid-cols-3 lg:gap-10 group w-full grid-cols-1 gap-2 px-2 lg:px-0">
           <div className="border-none rounded-xl shadow-md  bg-[#fa6237]   ">
             <div className="flex  p-5 justify-self-start flex-col ">
               <div className="pb-4">
@@ -43,7 +43,7 @@ const WhoUseServices = () => {
                 </div>
                 <div>
                   <p className="text-[16px] font-medium text-white">
-                    Resident on Sri Lanka
+                    Resident on Worldwide
                   </p>
                 </div>
               </div>

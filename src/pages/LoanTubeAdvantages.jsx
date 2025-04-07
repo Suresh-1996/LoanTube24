@@ -1,16 +1,16 @@
 import React from "react";
 
-const LoanPlusAdvantages = () => {
+const LoanTubeAdvantages = () => {
   return (
     <div className="flex items-center justify-center w-full bg-[#fa6237] ">
-      <div className=" flex w-6xl flex-col flex-initial justify-center items-center">
+      <div className=" flex w-6xl flex-col  flex-initial justify-center items-center">
         <div className="flex flex-col justify-center items-center text-center pt-16 pb-8 font-semibold">
           <h1 className="text-[28px] md:text-[32px] font-bold text-white ">
-            LoanPlus advantages
+            Loan Tube 24 advantages
           </h1>
         </div>
 
-        <div className="grid lg:grid-cols-3 lg:gap-10 grid-cols-1 gap-2 px-2 lg:px-0 ">
+        <div className="grid md:grid-cols-3   lg:gap-10 grid-cols-1 gap-2 px-2 lg:px-0 ">
           <div className="border-none rounded-xl shadow-md  bg-white  w-full ">
             <div className="flex  p-5 items-center justify-center flex-col">
               <div>
@@ -22,7 +22,7 @@ const LoanPlusAdvantages = () => {
                 </div>
                 <div>
                   <p className="text-[16px] font-medium text-gray-800">
-                    We are transfer up to $ 200,000 instantly to your account
+                    We are transfer up to 200,000 instantly to your account
                   </p>
                 </div>
               </div>
@@ -39,7 +39,7 @@ const LoanPlusAdvantages = () => {
                 </div>
                 <div>
                   <p className="text-[16px] font-medium text-gray-800">
-                    We are transfer up to $ 200,000 instantly to your account
+                    We are transfer up to 200,000 instantly to your account
                   </p>
                 </div>
               </div>
@@ -56,7 +56,7 @@ const LoanPlusAdvantages = () => {
                 </div>
                 <div>
                   <p className="text-[16px] font-medium text-gray-800">
-                    We are transfer up to $ 200,000 instantly to your account
+                    We are transfer up to 200,000 instantly to your account
                   </p>
                 </div>
               </div>
@@ -65,7 +65,7 @@ const LoanPlusAdvantages = () => {
         </div>
         <div className=" py-10">
           <button
-            className="w-full px-15 py-3 text-white rounded-full hover:shadow-gray-50 hover:shadow-sm text-lg font-bold transition duration-300"
+            className="w-full px-20 py-2 text-white rounded-full  hover:shadow-gray-50 hover:shadow-sm text-lg font-bold transition duration-300"
             style={{
               background:
                 "radial-gradient(125% 135% at 85.42% 0%, #9c2402 0%, #EE5A30 100%)",
@@ -86,4 +86,4 @@ const LoanPlusAdvantages = () => {
     </div>
   );
 };
-export default LoanPlusAdvantages;
+export default LoanTubeAdvantages;

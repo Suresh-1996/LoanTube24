@@ -13,7 +13,7 @@ const StepToGetLoan = () => {
           </h1>
         </div>
 
-        <div className="grid lg:grid-cols-4 lg:gap-10 grid-cols-1 gap-2 group w-full px-2 lg:px-0">
+        <div className="grid md:grid-cols-2  lg:grid-cols-4  lg:gap-10 grid-cols-1 gap-2 group w-full px-2 lg:px-0">
           <div className="border-none rounded-xl shadow-md  bg-white  ">
             <div className="flex  p-5 justify-start flex-col ">
               <div className="flex justify-center items-center w-[50px] h-[50px] rounded-full bg-[#fcd9cf] ">

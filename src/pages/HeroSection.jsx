@@ -1,29 +1,25 @@
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
-import { FiChevronDown, FiChevronUp } from "react-icons/fi"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
-const HeroSection = ({ open }) => {
-  const [isNewClient, setIsNewClient] = useState(true)
-  const [loanAmount, setLoanAmount] = useState(128000)
-  const [showPromo, setShowPromo] = useState(false)
-  const [promoCode, setPromoCode] = useState("")
-  const navigate = useNavigate()
+const HeroSection = () => {
+  const [isNewClient, setIsNewClient] = useState(true);
+  const [loanAmount, setLoanAmount] = useState(128000);
+  const [showPromo, setShowPromo] = useState(false);
+  const [promoCode, setPromoCode] = useState("");
+  const navigate = useNavigate();
 
-  const hadleClick = () => {
-    navigate("/loanPurpose")
-  }
+  const hadleClick = (event) => {
+    navigate("/loanPurpose");
+  };
 
   return (
-    <div
-      className={`w-full flex items-center justify-center lg:pt-30 ${
-        open && "mt-[4.375rem]"
-      }`}
-    >
-      <div className=" flex w-6xl flex-initial lg:pb-25 pb-2 lg:flex-row flex-col">
-        <div className="lg:w-1/2  py-6 pb-14 bg-[#EE5A30] border-none lg:rounded-l-xl">
+    <div className="w-full flex items-center justify-center lg:pt-30 ">
+      <div className=" flex w-6xl flex-initial lg:pb-25 pb-2 md:flex-row flex-col">
+        <div className="md:w-1/2  py-6 pb-14 bg-[#EE5A30]  border-none lg:rounded-l-xl">
           <div className=" mt-12 ">
             {/* lg screen */}
-            <div className="max-w-md mx-auto lg:block hidden px-3   ">
+            <div className="max-w-md mx-auto md:block hidden px-3   ">
               <h1 className="text-4xl  font-bold">Get online loan</h1>
               <h1 className="text-4xl font-bold ">
                 up to <span className="text-white">200 000</span>
@@ -36,7 +32,7 @@ const HeroSection = ({ open }) => {
             </div>
 
             {/* mobile view */}
-            <div className="flex lg:hidden px-4  justify-between items-center ">
+            <div className="flex md:hidden px-4   justify-between items-center ">
               <div className="w-1/2">
                 <h1 className="lg:text-4xl text-xl font-bold">
                   Get online loan
@@ -116,7 +112,7 @@ const HeroSection = ({ open }) => {
                   max="200000"
                   step="1000"
                   value={loanAmount}
-                  onChange={e => setLoanAmount(e.target.value)}
+                  onChange={(e) => setLoanAmount(e.target.value)}
                   className="w-full h-3 accent-[#EE5A30] "
                 />
               </div>
@@ -129,11 +125,11 @@ const HeroSection = ({ open }) => {
                   background:
                     "radial-gradient(125% 125% at 85.42% 0%, #9c2402 0%, #EE5A30 100%)",
                 }}
-                onMouseEnter={e =>
+                onMouseEnter={(e) =>
                   (e.target.style.background =
                     "radial-gradient(125% 110% at 50% -10%, #9c2402 0%, #EE5A30 100%)")
                 }
-                onMouseLeave={e =>
+                onMouseLeave={(e) =>
                   (e.target.style.background =
                     "radial-gradient(125% 135% at 85.42% 0%, #9c2402 0%, #EE5A30 100%)")
                 }
@@ -158,7 +154,7 @@ const HeroSection = ({ open }) => {
                       type="text"
                       placeholder="Enter promo-code"
                       value={promoCode}
-                      onChange={e => setPromoCode(e.target.value)}
+                      onChange={(e) => setPromoCode(e.target.value)}
                       className="w-full px-4 py-2 border-1 border-gray-400 rounded-lg focus:outline-none placeholder:font-bold placeholder:text-sm"
                     />
                     <button className=" py-2 px-3 bg-[#EE5A30] text-white font-semibold rounded-lg hover:bg-[#9c2402] transition">
@@ -171,7 +167,7 @@ const HeroSection = ({ open }) => {
           </div>
         </div>{" "}
         {/* #E6E1FF */}
-        <div className=" lg:block hidden lg:w-1/2 bg-[#EE5A30] border-none lg:rounded-r-xl ">
+        <div className=" md:block hidden md:w-1/2 bg-[#EE5A30] border-none md:rounded-r-xl ">
           <div className=" flex-wrap group relative  mt-12 py-2 ">
             <div className="absolute border flex-wrap group right-0 mt-4  "></div>
             <img src="wladies.png" alt="ladies image" />
@@ -179,7 +175,7 @@ const HeroSection = ({ open }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
