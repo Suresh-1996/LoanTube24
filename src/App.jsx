@@ -26,6 +26,10 @@ import Alert from "./components/Alert";
 import HowToBarrow from "./pages/HowToBarrow";
 import HowToRepay from "./pages/HowToRepay";
 import ContactNumber from "./pages/ContactNumber";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import BlogCarousel from "./pages/BlogCarousel";
+import BlogPage from "./pages/BlogPage";
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -48,6 +52,7 @@ function App() {
               {open && <Alert setOpen={setOpen} />}
               <Navbar open={open} />
               <HeroSection open={open} />
+              <BlogCarousel />
               <LoanTubeAdvantages />
               <WhoUseServices />
               <StepToGetLoan />
@@ -78,6 +83,8 @@ function App() {
           <Route path="howToBarrow" element={<HowToBarrow />} />
           <Route path="howToRepay" element={<HowToRepay />} />
           <Route path="contactNumber" element={<ContactNumber />} />
+
+          <Route path="/blog/:slug" element={<BlogPage />} />
         </Route>
       </Routes>
     </Router>
